@@ -1,4 +1,4 @@
-package ru.netology.rest;
+package ru.netology;
 
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
@@ -18,7 +18,7 @@ class MobileBankApiTestV2 {
                 // Проверки
                 .then()
                 .statusCode(200)
-                // .header("Content-Type", "application/json; charset=UTF-8")
+                .header("Content-Type", "application/json; charset=UTF-8")
                 // специализированные проверки - лучше
                 .contentType(ContentType.JSON)
         ;
